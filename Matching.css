@@ -1,0 +1,52 @@
+html, body{
+    height: 100%;
+    margin: 0;
+    padding: 0;
+
+}
+body{    
+    background: #4ECDC4;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #556270, #4ECDC4);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #556270, #4ECDC4); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.flip-card{
+    height: 10rem;
+    position: relative;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+}
+
+.flip{
+    transform: rotateY(180deg);
+    /* backface-visibility: visible; */
+}
+
+
+.flip-card-front, .flip-card-back{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    
+}
+.flip-card-front .card-text, .flip-card-back .card-text{
+    font-weight: bold;
+    font-size: 2rem;
+}
+.flip-card-front{   
+    background-color: black;
+    color: white;
+    /* z-index: 1; */
+    
+}
+.flip-card-back{
+    color: black;
+    background-color: yellow;
+    transform: rotateY(180deg);
+}
+.heading{
+    transition: 1s;
+}
